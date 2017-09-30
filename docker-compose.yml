@@ -9,9 +9,9 @@ nginx:
     - ./conf/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
     - ./log/nginx/:/var/log/nginx/:rw
   links:
-    - php-fpm:fpm
+    - phpfpm:fpm
 
-php-fpm:
+phpfpm:
   build: .
   expose:
     - "9000"
